@@ -1,0 +1,77 @@
+@keyframes main {
+	0% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.main_animation_01 {
+	animation: main ease 3s;
+}
+@keyframes menu {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	70% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.menu_animation_01 {
+	animation: menu ease 1.75s;
+}
+
+.menu_animation_02 {
+	animation: menu ease 2s;
+}
+
+@keyframes banners {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.banner_animation_01 {
+	animation: banners ease 1.5s;
+}
+
+@keyframes intro_titles {
+	0% {
+		transform: translateY(-20%);
+		opacity: 0;
+	}
+	80% {
+		transform: translateY(-30%);
+		opacity: 0;
+	}
+	100% {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+.title_animation_01 {
+	animation: intro_titles ease 2.75s;
+}
+
+.title_animation_02 {
+	animation: intro_titles ease 3s;
+}
+
+.title_animation_03 {
+	animation: intro_titles ease 3.25s;
+}

@@ -1,0 +1,90 @@
+body {
+	background: #fff;
+}
+
+.font-big {
+	font-size: var(--big-font-size);
+}
+
+.medium-font-size {
+	font-size: var(--medium-font-size);
+}
+
+.body-font-size {
+	font-size: var(--body-font-size);
+}
+
+.font-small {
+	font-size: var(--samll-font-size);
+}
+
+.medium-line-height {
+	line-height: 2.2rem;
+
+	@include from(1) {
+		line-height: 2.5rem;
+	}
+}
+
+.normal-line-height {
+	line-height: 1.6rem;
+
+	@include from(1) {
+		line-height: 1.8rem;
+	}
+}
+
+.font-orange {
+	color: var(--color-main);
+}
+
+.font-white {
+	color: #f0f0f0;
+}
+
+.margin-top {
+	margin-top: 1rem;
+	@include from(1) {
+		margin-top: 2rem;
+	}
+}
+
+.margin-bot {
+	margin-bottom: 1.5rem;
+	@include from(1) {
+		margin-bottom: 3rem;
+	}
+}
+
+.link-active {
+	color: var(--color-main);
+}
+
+.text-footer {
+	color: #666;
+}
+
+.p-small-margin {
+	margin-top: 0;
+}
+
+.line-decoration-orange {
+	margin: 0;
+	width: 50px;
+	border-bottom: 1px solid #f16124;
+	margin-bottom: 2rem;
+}
+
+.line-decoration-white {
+	margin: 0;
+	width: 50px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 2rem;
+}
+
+.line-decoration-dark {
+	margin: 0;
+	width: 50px;
+	border-bottom: 1px solid #222533;
+	margin-bottom: 2rem;
+}

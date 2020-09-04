@@ -1,0 +1,116 @@
+/// CONTAINERS
+
+* {
+	// box-shadow: 0 0 0 1px rgba(#f00,.5);
+}
+
+.padding_general {
+	margin: auto;
+	width: 90%;
+
+	@media (min-width: 640px) {
+		width: 75%;
+	}
+}
+
+.padding_general_vertical {
+	padding: 60px 0;
+	// background: #264;
+}
+
+.container_s1 {
+	display: flex;
+}
+
+.container_s1_left {
+	flex-grow: 1;
+	flex-shrink: 0;
+	width: 50px;
+}
+
+.container_s1_right {
+	padding-left: 20px;
+}
+
+.table_s1 {
+	border-collapse: collapse;
+	width: 100%;
+	// background: #333;
+
+	tr {
+		font-size: 16px;
+		border-bottom: 1px solid rgba(#fff, 0.3);
+		td {
+			padding: 2.5%;
+		}
+	}
+}
+
+.table_s1_head {
+	width: 50%;
+	border-top: 3px solid rgba(#fff, 0.5);
+	text-transform: uppercase;
+
+	th {
+		padding: 2%;
+	}
+}
+
+.certificaciones_logos_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	figure {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		font-size: 1.3rem;
+
+		p {
+			color: #000;
+		}
+
+		img {
+			display: block;
+		}
+	}
+}
+
+/// TEXTS STYLES
+
+.text_bold {
+	font-weight: 700;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.text_alignRight {
+	text-align: right;
+}
+
+.text_uppercase {
+	text-transform: uppercase;
+}
+
+.text_s2 {
+	font-size: 30px;
+}
+
+.text_s3 {
+	font-size: 20px;
+}
+
+.text_s4 {
+	font-size: 16px;
+}
+
+.text_s5 {
+	font-size: 60px;
+	font-weight: 700;
+	opacity: 50%;
+}

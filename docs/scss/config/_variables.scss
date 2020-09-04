@@ -1,0 +1,59 @@
+// Variables de Tamaños
+$max-width: 1280px;
+$top-menu-height: 2rem;
+$header-hight-initial: 6rem;
+$header-hight: 5rem;
+$footer-hight: 2rem;
+
+:root {
+	--footer-hight: 6rem;
+}
+
+// Variables de Colores
+$border-color: #ccc;
+$text-color: #53575a;
+$dark-color: #141618;
+
+// Break Points
+$breakpoints: (
+	1: 960px,
+	2: 1100px,
+);
+
+// Paleta de Colores
+:root {
+	--first-color: #007bdf;
+	--border-color: #666;
+	--alert-color: #ff3c32;
+	--color-main: #21c2f8;
+}
+
+// Variables de Apilamiento (z-index)
+:root {
+	--z-back: -10;
+	--z-normal: 1;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+}
+
+// Variables de Tipografía
+:root {
+	--h1-font-size: 2.5rem;
+	--h2-font-size: 2rem;
+	--h3-font-size: 1.75rem;
+	--big-font-size: 1.3rem;
+	--medium-font-size: 1.1rem;
+	--body-font-size: 0.9rem;
+	--samll-font-size: 0.75rem;
+
+	@include from(1) {
+		--h1-font-size: 4rem;
+		--h2-font-size: 2.6rem;
+		--h3-font-size: 1.8em;
+		--big-font-size: 1.6rem;
+		--medium-font-size: 1.4rem;
+		--body-font-size: 1.2rem;
+		--samll-font-size: 1rem;
+	}
+}

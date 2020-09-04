@@ -1,0 +1,50 @@
+.card {
+	border: 1px solid var(--border-color);
+	position: relative;
+
+	&-img img {
+		display: block;
+	}
+
+	&-content {
+		padding: 1rem;
+		background: #fff;
+		height: 200px;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		@include from(1) {
+			height: 275px;
+		}
+	}
+
+	&-subtitle {
+		margin-top: -1rem;
+		margin-bottom: 0.5rem;
+		opacity: 0.6;
+	}
+
+	&-footer {
+		border-top: 1px solid var(--border-color);
+		margin-top: 1rem;
+		padding-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		bottom: 1rem;
+		width: calc(100% - 2rem);
+	}
+}
+
+.cards-grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 2rem;
+	@include from(1) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 2rem;
+	}
+}

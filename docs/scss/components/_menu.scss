@@ -1,0 +1,231 @@
+.main-menu {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	height: 100%;
+
+	@include from(1) {
+		display: flex;
+	}
+}
+
+.main-menu-item-2 {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	transition: all ease 0.5s;
+	border-bottom: 1px solid rgba(#fff, 0.1);
+
+	@include from(1) {
+		height: 100%;
+		border-bottom: 1px solid rgba(#fff, 0);
+	}
+
+	&.showSubmenu {
+		transition: all ease 0.5s;
+		@media (max-width: 960px) {
+			transition: all ease 0.5s;
+			& .main-submenu {
+				background: #191c1f;
+				transition: all ease 0.5s;
+				display: flex;
+				flex-direction: column;
+				padding: 0;
+
+				& li {
+					transition: all ease 0.5s;
+					border-top: 1px solid rgba(#fff, 0.05);
+					display: flex;
+
+					& a {
+						color: var(--border-color);
+						padding: 0.5rem 2rem;
+						width: 100%;
+						&:hover {
+							color: var(--color-main);
+							transition: all ease 0.3s;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& a {
+		margin: 0;
+		height: 100%;
+	}
+
+	&:hover {
+		@include from(1) {
+			& .main-submenu {
+				transition: all ease 0.5s;
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.main-menu-item {
+	display: flex;
+	position: relative;
+	transition: all ease 0.5s;
+	border-bottom: 1px solid rgba(#fff, 0.1);
+
+	&:hover {
+		@include from(1) {
+			border-bottom: 1px solid rgba(#fff, 0);
+			& .main-submenu {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.submenu-scroll {
+	& .main-submenu {
+		transition: all ease 0.5s;
+		top: calc(#{$header-hight} - 1px);
+		background: rgba(#fff, 0.9);
+		border-bottom: 1px solid rgba(#000, 0.1);
+		border-right: 1px solid rgba(#000, 0.1);
+		border-left: 1px solid rgba(#000, 0.1);
+	}
+}
+
+.main-submenu {
+	list-style: none;
+	display: none;
+	transition: all ease 0.5s;
+	padding-left: 0.5rem;
+	@include from(1) {
+		transition: all ease 0.5s;
+		display: none;
+		position: absolute;
+		width: 150%;
+		top: calc(#{$header-hight-initial} - 1px);
+		padding-left: 0;
+		background: rgba(#000, 0.2);
+		border-top: 2px solid rgba(#21c2f8, 0.9);
+		border-bottom: 1px solid rgba(#f0f0f0, 0.2);
+		border-right: 1px solid rgba(#f0f0f0, 0.2);
+		border-left: 1px solid rgba(#f0f0f0, 0.2);
+
+		& li {
+			width: 100%;
+		}
+	}
+}
+
+.main-submenu-link {
+	transition: all ease 0.3s;
+	border-bottom: 1px solid rgba(#000, 0.1);
+
+	@include from(1) {
+		color: #fff;
+		font-size: 1rem;
+		display: flex;
+		padding: 1rem;
+	}
+}
+
+.main-menu-link {
+	font-weight: bold;
+	color: var(--border-color);
+	transition: all ease 0.3s;
+	padding: 1rem;
+	flex: 1;
+
+	&:hover {
+		color: var(--color-main);
+		transition: all ease 0.3s;
+	}
+
+	@include from(1) {
+		color: #fff;
+		font-size: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+}
+
+.main-menu-link-active {
+	color: #21c2f8;
+	font-weight: bold;
+	transition: all ease 0.3s;
+	padding: 1rem;
+	flex: 1;
+
+	@include from(1) {
+		color: var(--color-main);
+		font-size: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
+}
+
+.main-nav {
+	position: fixed;
+	height: calc(100vh - #{$header-hight-initial});
+	width: 80vw;
+	background: $dark-color;
+	top: calc(#{$top-menu-height} + #{$header-hight-initial});
+	right: -100vw;
+	transition: all ease 0.5s;
+	padding: 0;
+	z-index: var(--z-fixed);
+
+	@include from(1) {
+		position: static;
+		background: transparent;
+		padding-top: 0;
+		width: auto;
+		height: 100%;
+	}
+
+	&.show {
+		right: 0;
+	}
+}
+
+.main-nav-scroll {
+	top: calc(#{$top-menu-height} + #{$header-hight});
+	right: -100vw;
+	transition: all ease 0.5s;
+	padding: 0;
+	z-index: var(--z-fixed);
+
+	@include from(1) {
+		position: static;
+		background: transparent;
+		padding-top: 0;
+		height: auto;
+		width: auto;
+		height: 100%;
+	}
+
+	&.show {
+		right: 0;
+	}
+}
+
+.main-menu-toggle {
+	$color: $dark-color;
+	width: 2.2rem;
+	height: 2rem;
+	background: linear-gradient($color 20%, transparent 20%, transparent 40%, $color 40%, $color 60%, transparent 60%, transparent 80%, $color 80%);
+	cursor: pointer;
+
+	@include from(1) {
+		display: none;
+	}
+}

@@ -1,0 +1,161 @@
+* {
+	// box-shadow: 0 0 0 1px rgba(#f00,.5);
+}
+
+.center_maxwidth {
+	max-width: 1280px;
+	margin: auto;
+}
+
+#contacto {
+	// background: #123;
+}
+
+/// MAPA
+
+#mapa_wrapper {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 6px;
+	overflow: hidden;
+	height: 400px;
+}
+
+/// FORMULARIO
+
+#formulario_wrapper {
+	background: #eee;
+	padding: 40px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+}
+
+#formulario_wrapper2 {
+	padding: 40px;
+	border-radius: 6px;
+	margin-top: 2rem;
+	margin-bottom: 0;
+
+	h2 {
+		margin-bottom: 3rem;
+	}
+
+	input,
+	select,
+	textarea {
+		font-family: inherit;
+	}
+}
+
+#formulario_contacto {
+	@media (min-width: 640px) {
+		display: flex;
+	}
+}
+
+.formulario_col {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+
+	&:first-child {
+		@media (min-width: 640px) {
+			margin-right: 20px;
+		}
+	}
+}
+
+.input_text {
+	padding: 20px;
+	border: #21c2f8 solid 2px;
+	border-radius: 6px;
+	font-family: "lato";
+	font-size: 16px;
+	margin-bottom: 5px;
+	transition: all ease 0.3s;
+
+	&:hover {
+		border: var(--color-main) solid 2px;
+	}
+}
+
+.btn_submit {
+	padding: 20px;
+	border-radius: 0 0 6px 6px;
+	font-family: "lato";
+	font-size: 16px;
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all ease 0.3s;
+	background: var(--color-main);
+
+	&:hover {
+		background: #007bdf;
+	}
+}
+
+.text_area {
+	margin: 0;
+	border-radius: 6px 6px 0 0;
+}
+
+.textS1 {
+	font-size: 30px;
+	color: #333;
+}
+
+/// DATOS DE CONTACTO
+
+#contacto_datos {
+	font-size: 15px;
+	border-radius: 6px;
+	background: #eee;
+	// margin-top: 10px;
+	padding: 20px;
+	margin-bottom: 10px;
+
+	@media (min-width: 640px) {
+		display: flex;
+	}
+}
+
+.contacto_datos_col {
+	padding: 20px;
+	flex-grow: 1;
+}
+
+// SCROLL
+
+::-webkit-scrollbar {
+	position: absolute;
+	height: 10px !important;
+	overflow: visible !important;
+	width: 8px !important;
+	-webkit-appearance: none;
+}
+::-webkit-scrollbar-thumb {
+	box-sizing: border-box;
+	border-radius: 6px;
+	width: 5px !important;
+	border: 2px solid transparent !important;
+	background: linear-gradient(to bottom, rgba(#21c2f8, 1) 0%, rgba(#21c2f8, 1) 100%);
+	transition: all ease 0.5s;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(#21c2f8, 1);
+	transition: all ease 0.5s;
+}
+
+::-webkit-scrollbar-button {
+	height: 0px !important;
+	width: 0px !important;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent !important;
+}
+::-webkit-scrollbar-corner {
+	background: transparent !important;
+}

@@ -1,0 +1,24 @@
+@mixin from($bp) {
+	@if map-has-key($breakpoints, $bp) {
+		@media screen and (min-width: map_get($breakpoints,$bp)) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width: $bp) {
+			@content;
+		}
+	}
+}
+
+@mixin Proporcion($ancho, $alto) {
+	display: grid;
+	grid-template-columns: repeat($ancho, 1fr);
+	grid-template-rows: repeat($alto, 1fr);
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+	}
+}

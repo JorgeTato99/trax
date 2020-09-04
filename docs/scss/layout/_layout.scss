@@ -1,0 +1,163 @@
+.l-container {
+	max-width: $max-width;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-right: auto;
+	margin-left: auto;
+	/*
+	background: #fff;
+
+	& h2 {
+		background: #000;
+	}
+
+	& p {
+		background: red;
+	}
+
+	& div {
+		background: blue;
+	}*/
+}
+
+.l-section {
+	&-diagonal-grey {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #f0f0f0;
+			z-index: var(--z-back);
+		}
+	}
+
+	&-diagonal-orange {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #f16124;
+			z-index: var(--z-back);
+		}
+	}
+
+	&-diagonal-green {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #27702d;
+			z-index: var(--z-back);
+		}
+	}
+
+	&-diagonal-red {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #a82626;
+			z-index: var(--z-back);
+		}
+	}
+
+	&-diagonal-blue {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: var(--first-color);
+			z-index: var(--z-back);
+		}
+	}
+
+	&-diagonal-dark {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #222533;
+			z-index: var(--z-back);
+		}
+	}
+}
+
+.after-header {
+	height: $header-hight-initial;
+}
+
+// Anchos Personalizados
+@for $i from 1 through 20 {
+	.s-#{$i*5} {
+		width: #{$i * 5%};
+	}
+}
+
+@include from(1) {
+	@for $i from 1 through 20 {
+		.l-#{$i*5} {
+			width: #{$i * 5%};
+		}
+	}
+}
+
+// Altos Personalizados
+.h-100 {
+	height: 100%;
+}
+
+.center-block {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-content {
+	text-align: center;
+}
+
+.right-content {
+	text-align: right;
+}
+
+.left-content {
+	text-align: left;
+}
+
+.justify-content {
+	text-align: justify;
+}
+
+.img-1 {
+	@include Proporcion(16, 9);
+	background: url(../img/tde.jpg) center / cover;
+}
+
+.img-2 {
+	@include Proporcion(16, 9);
+	background: url(../img/workshops.jpg) center / cover;
+}
+
+.img-3 {
+	@include Proporcion(16, 9);
+	background: url(../img/2.jpg) center / cover;
+}
+
+.img-4 {
+	@include Proporcion(16, 9);
+	background: url(../img/1.jpg) center / cover;
+}
